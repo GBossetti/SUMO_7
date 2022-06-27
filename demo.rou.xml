@@ -1,0 +1,224 @@
+<routes>
+  <vType id="car" 
+  vClass="passenger" length="2" accel="30.5" decel="20.2" 
+  sigma="1.0" maxSpeed="10" color="0,0,255"/>
+	
+  <vType id="car1" 
+  vClass="passenger" length="2" accel="30.5" decel="20.2" 
+  sigma="1.0" maxSpeed="10" color="0,255,255"/>
+	
+  <vType id="car2" 
+  vClass="passenger" length="2" accel="30.5" decel="20.2" 
+  sigma="1.0" maxSpeed="10" color="1,0,0"/>
+
+	<vType id="car3" 
+  vClass="passenger" length="2" accel="3.5" decel="20.2" 
+  sigma="1.0" maxSpeed="10" color="0,255,0"/>
+
+  <route id="route_0" edges="E0 E1 E2 E3 E4 -E0" />
+  <route id="route_1" edges="E1 E2 E3 E4 -E0" />
+  <route id="route_2" edges="E2 E3 E4 E1" />
+  <route id="route_3" edges="E3 E4 E1 E2" />
+  <route id="route_4" edges="E4 E1 E2 E3" />
+
+  <!--FLUJO DE AUTOS-->
+  
+  <!--100 AUTOS ORIGEN E0 DISTRIBUIDOS CADA DELTA T-->
+  <!--<flow id="carflow" type="car" beg="105" end="0" number="100" route="route_0"/>
+	<flow id="carflow1" type="car1" beg="118" end="0" number="100" route="route_0"/>
+	<flow id="carflow2" type="car2" beg="134" end="0" number="100" route="route_0"/>
+	<flow id="carflow3" type="car3" beg="153" end="0" number="100" route="route_0"/>
+	<flow id="carflow4" type="car3" beg="183" end="0" number="100" route="route_0"/>
+	<flow id="carflow5" type="car3" beg="222.5" end="0" number="100" route="route_0"/>
+	<flow id="carflow6" type="car3" beg="287.5" end="0" number="100" route="route_0"/>
+	<flow id="carflow7" type="car3" beg="404" end="0" number="100" route="route_0"/>
+	<flow id="carflow8" type="car3" beg="693" end="0" number="100" route="route_0"/>
+	<flow id="carflow9" type="car3" beg="5300" end="0" number="100" route="route_0"/>-->
+
+  <!--100 AUTOS DISTRIBUIDOS EN E1:30 | E2:10 | E3:40 | E4:20 -->
+  <flow id="carflow01" type="car" beg="105" end="0" number="30" route="route_1"/>
+  <flow id="carflow02" type="car1" beg="105" end="0" number="10" route="route_2"/>
+  <flow id="carflow03" type="car2" beg="105" end="0" number="40" route="route_3"/>
+  <flow id="carflow04" type="car3" beg="105" end="0" number="20" route="route_4"/>
+
+  <!--100 AUTOS DISTRIBUIDOS EN  E1:30 | E2:10 | E3:40 | E4:20  CADA DELTA T-->
+  <!--<flow id="carflow01" type="car" beg="105" end="0" number="30" route="route_1"/>
+  <flow id="carflow02" type="car" beg="105" end="0" number="10" route="route_2"/>
+  <flow id="carflow03" type="car" beg="105" end="0" number="40" route="route_3"/>
+  <flow id="carflow04" type="car" beg="105" end="0" number="20" route="route_4"/>
+
+  <flow id="carflow11" type="car1" beg="118" end="0" number="30" route="route_1"/>
+	<flow id="carflow12" type="car1" beg="118" end="0" number="10" route="route_2"/>
+	<flow id="carflow13" type="car1" beg="118" end="0" number="40" route="route_3"/>
+	<flow id="carflow14" type="car1" beg="118" end="0" number="20" route="route_4"/>
+
+	<flow id="carflow21" type="car2" beg="134" end="0" number="30" route="route_0"/>
+	<flow id="carflow22" type="car2" beg="134" end="0" number="10" route="route_0"/>
+	<flow id="carflow23" type="car2" beg="134" end="0" number="40" route="route_0"/>
+	<flow id="carflow24" type="car2" beg="134" end="0" number="20" route="route_0"/>
+
+	<flow id="carflow31" type="car3" beg="153" end="0" number="30" route="route_1"/>
+	<flow id="carflow32" type="car3" beg="153" end="0" number="10" route="route_2"/>
+	<flow id="carflow33" type="car3" beg="153" end="0" number="40" route="route_3"/>
+	<flow id="carflow34" type="car3" beg="153" end="0" number="20" route="route_4"/>
+
+	<flow id="carflow41" type="car" beg="183" end="0" number="30" route="route_1"/>
+	<flow id="carflow42" type="car" beg="183" end="0" number="10" route="route_2"/>
+	<flow id="carflow43" type="car" beg="183" end="0" number="40" route="route_3"/>
+	<flow id="carflow44" type="car" beg="183" end="0" number="20" route="route_4"/>
+  
+	<flow id="carflow51" type="car3" beg="222.5" end="0" number="30" route="route_1"/>
+	<flow id="carflow52" type="car3" beg="222.5" end="0" number="10" route="route_2"/>
+	<flow id="carflow53" type="car3" beg="222.5" end="0" number="40" route="route_3"/>
+	<flow id="carflow54" type="car3" beg="222.5" end="0" number="20" route="route_4"/>
+
+	<flow id="carflow61" type="car3" beg="287.5" end="0" number="30" route="route_1"/>
+	<flow id="carflow62" type="car3" beg="287.5" end="0" number="10" route="route_2"/>
+	<flow id="carflow63" type="car3" beg="287.5" end="0" number="40" route="route_3"/>
+	<flow id="carflow64" type="car3" beg="287.5" end="0" number="20" route="route_4"/>
+
+	<flow id="carflow71" type="car3" beg="404" end="0" number="30" route="route_1"/>
+	<flow id="carflow72" type="car3" beg="404" end="0" number="10" route="route_2"/>
+	<flow id="carflow73" type="car3" beg="404" end="0" number="40" route="route_3"/>
+	<flow id="carflow74" type="car3" beg="404" end="0" number="20" route="route_4"/>
+
+	<flow id="carflow81" type="car3" beg="693" end="0" number="30" route="route_1"/>
+	<flow id="carflow82" type="car3" beg="693" end="0" number="10" route="route_2"/>
+	<flow id="carflow83" type="car3" beg="693" end="0" number="40" route="route_3"/>
+	<flow id="carflow84" type="car3" beg="693" end="0" number="20" route="route_4"/>
+
+	<flow id="carflow91" type="car3" beg="5300" end="0" number="30" route="route_1"/>
+	<flow id="carflow92" type="car3" beg="5300" end="0" number="10" route="route_2"/>
+	<flow id="carflow93" type="car3" beg="5300" end="0" number="40" route="route_3"/>
+	<flow id="carflow94" type="car3" beg="5300" end="0" number="20" route="route_4"/>-->
+
+
+
+  
+  <!--<vehicle id="0" type="car" route="route_0" depart="0"/>
+  <vehicle id="1" type="car3" route="route_0" depart="3"/>
+  <vehicle id="2" type="car1" route="route_0" depart="6"/>
+  <vehicle id="3" type="car2" route="route_0" depart="9"/>
+  <vehicle id="4" type="car3" route="route_0" depart="12"/>-->
+
+  <!--<vehicle id="0" type="car" route="route_1" depart="0"/>
+  <vehicle id="1" type="car" route="route_1" depart="0"/>
+  <vehicle id="2" type="car" route="route_1" depart="0"/>
+  <vehicle id="3" type="car" route="route_2" depart="0"/>
+  <vehicle id="4" type="car" route="route_3" depart="0"/>
+  <vehicle id="5" type="car" route="route_3" depart="0"/>
+  <vehicle id="6" type="car" route="route_3" depart="0"/>
+  <vehicle id="7" type="car" route="route_3" depart="0"/>
+  <vehicle id="8" type="car" route="route_4" depart="0"/>
+  <vehicle id="9" type="car" route="route_4" depart="0"/>
+  
+  <vehicle id="00" type="car3" route="route_1" depart="105"/>
+  <vehicle id="01" type="car3" route="route_1" depart="105"/>
+  <vehicle id="02" type="car3" route="route_1" depart="105"/>
+  <vehicle id="03" type="car3" route="route_2" depart="105"/>
+  <vehicle id="04" type="car3" route="route_3" depart="105"/>
+  <vehicle id="05" type="car3" route="route_3" depart="105"/>
+  <vehicle id="06" type="car3" route="route_3" depart="105"/>
+  <vehicle id="07" type="car3" route="route_3" depart="105"/>
+  <vehicle id="08" type="car3" route="route_4" depart="105"/>
+  <vehicle id="09" type="car3" route="route_4" depart="105"/>
+
+  <vehicle id="10" type="car1" route="route_1" depart="223"/>
+  <vehicle id="11" type="car1" route="route_1" depart="223"/>
+  <vehicle id="12" type="car1" route="route_1" depart="223"/>
+  <vehicle id="13" type="car1" route="route_2" depart="223"/>
+  <vehicle id="14" type="car1" route="route_3" depart="223"/>
+  <vehicle id="15" type="car1" route="route_3" depart="223"/>
+  <vehicle id="16" type="car1" route="route_3" depart="223"/>
+  <vehicle id="17" type="car1" route="route_3" depart="223"/>
+  <vehicle id="18" type="car1" route="route_4" depart="223"/>
+  <vehicle id="19" type="car1" route="route_4" depart="223"/>
+
+  <vehicle id="20" type="car2" route="route_1" depart="357"/>
+  <vehicle id="21" type="car2" route="route_1" depart="357"/>
+  <vehicle id="22" type="car2" route="route_1" depart="357"/>
+  <vehicle id="23" type="car2" route="route_2" depart="357"/>
+  <vehicle id="24" type="car2" route="route_3" depart="357"/>
+  <vehicle id="25" type="car2" route="route_3" depart="357"/>
+  <vehicle id="26" type="car2" route="route_3" depart="357"/>
+  <vehicle id="27" type="car2" route="route_3" depart="357"/>
+  <vehicle id="28" type="car2" route="route_4" depart="357"/>
+  <vehicle id="29" type="car2" route="route_4" depart="357"/>
+
+  <vehicle id="30" type="car" route="route_1" depart="510"/>
+  <vehicle id="31" type="car" route="route_1" depart="510"/>
+  <vehicle id="32" type="car" route="route_1" depart="510"/>
+  <vehicle id="33" type="car" route="route_2" depart="510"/>
+  <vehicle id="34" type="car" route="route_3" depart="510"/>
+  <vehicle id="35" type="car" route="route_3" depart="510"/>
+  <vehicle id="36" type="car" route="route_3" depart="510"/>
+  <vehicle id="37" type="car" route="route_3" depart="510"/>
+  <vehicle id="38" type="car" route="route_4" depart="510"/>
+  <vehicle id="39" type="car" route="route_4" depart="510"/>
+
+  <vehicle id="40" type="car3" route="route_1" depart="693"/>
+  <vehicle id="41" type="car3" route="route_1" depart="693"/>
+  <vehicle id="42" type="car3" route="route_1" depart="693"/>
+  <vehicle id="43" type="car3" route="route_2" depart="693"/>
+  <vehicle id="44" type="car3" route="route_3" depart="693"/>
+  <vehicle id="45" type="car3" route="route_3" depart="693"/>
+  <vehicle id="46" type="car3" route="route_3" depart="693"/>
+  <vehicle id="47" type="car3" route="route_3" depart="693"/>
+  <vehicle id="48" type="car3" route="route_4" depart="693"/>
+  <vehicle id="49" type="car3" route="route_4" depart="693"/>
+
+  <vehicle id="50" type="car1" route="route_1" depart="915"/>
+  <vehicle id="51" type="car1" route="route_1" depart="915"/>
+  <vehicle id="52" type="car1" route="route_1" depart="915"/>
+  <vehicle id="53" type="car1" route="route_2" depart="915"/>
+  <vehicle id="54" type="car1" route="route_3" depart="915"/>
+  <vehicle id="55" type="car1" route="route_3" depart="915"/>
+  <vehicle id="56" type="car1" route="route_3" depart="915"/>
+  <vehicle id="57" type="car1" route="route_3" depart="915"/>
+  <vehicle id="58" type="car1" route="route_4" depart="915"/>
+  <vehicle id="59" type="car1" route="route_4" depart="915"/>
+  
+  <vehicle id="60" type="car2" route="route_1" depart="1203"/>
+  <vehicle id="61" type="car2" route="route_1" depart="1203"/>
+  <vehicle id="62" type="car2" route="route_1" depart="1203"/>
+  <vehicle id="63" type="car2" route="route_2" depart="1203"/>
+  <vehicle id="64" type="car2" route="route_3" depart="1203"/>
+  <vehicle id="65" type="car2" route="route_3" depart="1203"/>
+  <vehicle id="66" type="car2" route="route_3" depart="1203"/>
+  <vehicle id="67" type="car2" route="route_3" depart="1203"/>
+  <vehicle id="68" type="car2" route="route_4" depart="1203"/>
+  <vehicle id="69" type="car2" route="route_4" depart="1203"/>
+  
+  <vehicle id="70" type="car" route="route_1" depart="1607"/>
+  <vehicle id="71" type="car" route="route_1" depart="1607"/>
+  <vehicle id="72" type="car" route="route_1" depart="1607"/>
+  <vehicle id="73" type="car" route="route_2" depart="1607"/>
+  <vehicle id="74" type="car" route="route_3" depart="1607"/>
+  <vehicle id="75" type="car" route="route_3" depart="1607"/>
+  <vehicle id="76" type="car" route="route_3" depart="1607"/>
+  <vehicle id="77" type="car" route="route_3" depart="1607"/>
+  <vehicle id="78" type="car" route="route_4" depart="1607"/>
+  <vehicle id="79" type="car" route="route_4" depart="1607"/>
+  
+  <vehicle id="80" type="car3" route="route_1" depart="2300"/>
+  <vehicle id="81" type="car3" route="route_1" depart="2300"/>
+  <vehicle id="82" type="car3" route="route_1" depart="2300"/>
+  <vehicle id="83" type="car3" route="route_2" depart="2300"/>
+  <vehicle id="84" type="car3" route="route_3" depart="2300"/>
+  <vehicle id="85" type="car3" route="route_3" depart="2300"/>
+  <vehicle id="86" type="car3" route="route_3" depart="2300"/>
+  <vehicle id="87" type="car3" route="route_3" depart="2300"/>
+  <vehicle id="88" type="car3" route="route_4" depart="2300"/>
+  <vehicle id="89" type="car3" route="route_4" depart="2300"/>
+  
+  <vehicle id="90" type="car2" route="route_1" depart="7600"/>
+  <vehicle id="91" type="car2" route="route_1" depart="7600"/>
+  <vehicle id="92" type="car2" route="route_1" depart="7600"/>
+  <vehicle id="93" type="car2" route="route_2" depart="7600"/>
+  <vehicle id="94" type="car2" route="route_3" depart="7600"/>
+  <vehicle id="95" type="car2" route="route_3" depart="7600"/>
+  <vehicle id="96" type="car2" route="route_3" depart="7600"/>
+  <vehicle id="97" type="car2" route="route_3" depart="7600"/>
+  <vehicle id="98" type="car2" route="route_4" depart="7600"/>
+  <vehicle id="99" type="car2" route="route_4" depart="7600"/>-->
+</routes>
